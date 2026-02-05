@@ -22,8 +22,13 @@ public class Salaried extends Employee{
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
-
+	
 	@Override
+	public double getPay() {
+		double weeklyPay = salary / 52;
+		return weeklyPay;
+	}
+	
 	public String toString() {
 		return  id + ":" + name + ":" + address + ":" + phone + ":" + sin + ":" + dob + ":" + dept + ":" + salary;
 	}

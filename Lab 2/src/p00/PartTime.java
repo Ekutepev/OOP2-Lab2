@@ -32,11 +32,12 @@ public class PartTime extends Employee{
 		this.hours = hours;
 	}
 	
+	@Override
 	public double getPay() {
 		return rate * hours;
 	}
 
-	@Override
+	
 	public String toString() {
 		return  id + ":" + name + ":" + address + ":" + phone + ":" + sin + ":" + dob + ":" + dept + ":" + rate +":"+ hours;
 	}

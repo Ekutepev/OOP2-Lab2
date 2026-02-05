@@ -32,6 +32,7 @@ public class Wages extends Employee{
 		this.hours = hours;
 	}
 	
+	@Override
 	public double getPay() {
 		if (hours > 40) {
 			double ragularePay = rate * 40;
@@ -42,7 +43,6 @@ public class Wages extends Employee{
 		}
 	}
 	
-	@Override
 	public String toString() {
 		return  id + ":" + name + ":" + address + ":" + phone + ":" + sin + ":" + dob + ":" + dept + ":" + rate +":"+ hours;
 	}

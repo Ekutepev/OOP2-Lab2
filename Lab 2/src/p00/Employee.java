@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Employee {
 	
@@ -48,6 +49,19 @@ public class Employee {
 			}
 	}
 	
+	public void empPayGrade() {
+		for(Employee x : employee ) {
+			char firstChar = x.id.charAt(0);
+			if ( '0' <= firstChar && firstChar <= '4')  {
+				Employee salary = new Salaried();
+			} else if ('5' <= firstChar && firstChar <= '7') {
+				Employee wage = new Wages();
+			} else if ('8' <= firstChar && firstChar <= '9') {
+				Employee partTime = new PartTime();
+			}
+			return;
+		}
+	}
 
 
 	public String getId() {
@@ -121,7 +135,7 @@ public class Employee {
 	
 //	Still need to figure this section out (how to pull from child into parent
 	public double averageWeeklyPayAllEmp() {
-		
+		return; 
 	}
 	
 
@@ -130,7 +144,9 @@ public class Employee {
 	public String toString() {
 		return id + ":" + name + ":" + address + ":" + phone + ":" + sin + ":" + dob + ":" + dept;
 	}
-	
-	
+
+	public double getPay() {
+		return 0;
+	}
 
 }
