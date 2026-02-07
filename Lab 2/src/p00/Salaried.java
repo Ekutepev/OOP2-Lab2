@@ -29,6 +29,7 @@ public class Salaried extends Employee{
 		return weeklyPay;
 	}
 	
+	@Override
 	public String toString() {
 		return  id + ":" + name + ":" + address + ":" + phone + ":" + sin + ":" + dob + ":" + dept + ":" + salary;
 	}

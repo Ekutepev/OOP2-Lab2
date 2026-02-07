@@ -37,7 +37,7 @@ public class PartTime extends Employee{
 		return rate * hours;
 	}
 
-	
+	@Override
 	public String toString() {
 		return  id + ":" + name + ":" + address + ":" + phone + ":" + sin + ":" + dob + ":" + dept + ":" + rate +":"+ hours;
 	}

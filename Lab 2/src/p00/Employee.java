@@ -1,14 +1,8 @@
 package p00;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-
 public class Employee {
 	
-	private static ArrayList<Employee> employee = new ArrayList<>();
+//	private static ArrayList<Employee> employee = new ArrayList<>();
 	
 	// Attributes
 	String id;
@@ -21,7 +15,7 @@ public class Employee {
 	
 	
 	public Employee() {
-		loadEmployeeList();
+
 	}
 	
 	public Employee(String id, String name, String address, String phone, long sin, String dob, String dept) {
@@ -35,33 +29,32 @@ public class Employee {
 	}
 
 	
-	private void loadEmployeeList() {
-		 try (BufferedReader br = new BufferedReader(new FileReader("./res/employee.txt"))) {
-			 String line;
-			 
-			 while ((line = br.readLine()) != null) {
-				 String[] lists = line.split(":");
-				 Employee EmployeeLines = new Employee(lists[0], lists[1], lists[2], lists[3], Long.parseLong(lists[4]), lists[5], lists[6]);
-				 employee.add(EmployeeLines);
-				 }
-		 } catch (IOException e) {
-				e.printStackTrace();
-			}
-	}
+//	private void loadEmployeeList() {
+//		 try (BufferedReader br = new BufferedReader(new FileReader("./res/employees.txt"))) {
+//			 String line;
+//			 
+//			 while ((line = br.readLine()) != null) {
+//				 String[] lists = line.split(":");
+//				 Employee EmployeeLines = new Employee(lists[0], lists[1], lists[2], lists[3], Long.parseLong(lists[4]), lists[5], lists[6]);
+//				 employee.add(EmployeeLines);
+//				 }
+//		 } catch (IOException e) {
+//				e.printStackTrace();
+//			}
+//	}
 	
-	public void empPayGrade() {
-		for(Employee x : employee ) {
-			char firstChar = x.id.charAt(0);
-			if ( '0' <= firstChar && firstChar <= '4')  {
-				Employee salary = new Salaried();
-			} else if ('5' <= firstChar && firstChar <= '7') {
-				Employee wage = new Wages();
-			} else if ('8' <= firstChar && firstChar <= '9') {
-				Employee partTime = new PartTime();
-			}
-			return;
-		}
-	}
+//	public void empPayGrade() {
+//		for(Employee x : employee ) {
+//			char firstChar = x.id.charAt(0);
+//			if ( '0' <= firstChar && firstChar <= '4')  {
+//				Employee salary = new Salaried();
+//			} else if ('5' <= firstChar && firstChar <= '7') {
+//				Employee wage = new Wages();
+//			} else if ('8' <= firstChar && firstChar <= '9') {
+//				Employee partTime = new PartTime();
+//			}
+//		}
+//	}
 
 
 	public String getId() {
@@ -133,20 +126,20 @@ public class Employee {
 		this.dept = dept;
 	}
 	
-//	Still need to figure this section out (how to pull from child into parent
-	public double averageWeeklyPayAllEmp() {
-		return; 
-	}
-	
+////	Still need to figure this section out (how to pull from child into parent
+//	public double averageWeeklyPayAllEmp(double rate, double hours, double salary) {
+//		double x = hours * rate;
+//		double total = x * salary;
+////		System.out.println("The average pay for all employees is: " + total);
+//		return total;
+//	}
+//	
 
-
-	@Override
 	public String toString() {
 		return id + ":" + name + ":" + address + ":" + phone + ":" + sin + ":" + dob + ":" + dept;
 	}
 
 	public double getPay() {
 		return 0;
-	}
-
+		}
 }

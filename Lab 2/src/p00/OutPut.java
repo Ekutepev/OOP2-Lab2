@@ -4,7 +4,7 @@ public class OutPut {
 
 	public static void main(String[] args) {
 		
-		new Employee();
+		new EmployeeManager();
 		
 	}
 
