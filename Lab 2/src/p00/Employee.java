@@ -28,35 +28,6 @@ public class Employee {
 		this.dept = dept;
 	}
 
-	
-//	private void loadEmployeeList() {
-//		 try (BufferedReader br = new BufferedReader(new FileReader("./res/employees.txt"))) {
-//			 String line;
-//			 
-//			 while ((line = br.readLine()) != null) {
-//				 String[] lists = line.split(":");
-//				 Employee EmployeeLines = new Employee(lists[0], lists[1], lists[2], lists[3], Long.parseLong(lists[4]), lists[5], lists[6]);
-//				 employee.add(EmployeeLines);
-//				 }
-//		 } catch (IOException e) {
-//				e.printStackTrace();
-//			}
-//	}
-	
-//	public void empPayGrade() {
-//		for(Employee x : employee ) {
-//			char firstChar = x.id.charAt(0);
-//			if ( '0' <= firstChar && firstChar <= '4')  {
-//				Employee salary = new Salaried();
-//			} else if ('5' <= firstChar && firstChar <= '7') {
-//				Employee wage = new Wages();
-//			} else if ('8' <= firstChar && firstChar <= '9') {
-//				Employee partTime = new PartTime();
-//			}
-//		}
-//	}
-
-
 	public String getId() {
 		return id;
 	}

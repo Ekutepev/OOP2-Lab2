@@ -42,14 +42,14 @@ public class EmployeeManager {
 			}
 	}
 	
-	public double averageWeeklyPayAllEmp() {
+	private double averageWeeklyPayAllEmp() {
 		double total = 0;
 		for(Employee x: employee) {
 			total += x.getPay();
 		} return total / employee.size();
 	}
 	
-	public String highestWageWeeklyPayEmp() {
+	private String highestWageWeeklyPayEmp() {
 		String highestPayEmp = "";
 		double highestPaySoFar = 0;
 		double empWeeklyPay = 0;
@@ -64,7 +64,7 @@ public class EmployeeManager {
 		}return highestPayEmp;
 	}
 	
-	public String salariedLowestPayEmp() {
+	private String salariedLowestPayEmp() {
 		String lowestPayEmp = "";
 		double lowestPaySoFar = Double.POSITIVE_INFINITY;
 		double empWeeklyPay;
@@ -79,7 +79,7 @@ public class EmployeeManager {
 		}return lowestPayEmp;
 	}
 	
-	public double percentOfSalariedEmp() {
+	private double percentOfSalariedEmp() {
 		double salaryEmpSize = 0; 
 		for(Employee emp : employee) {
 			if (emp instanceof Salaried) {
@@ -89,7 +89,7 @@ public class EmployeeManager {
 		return (salaryEmpSize / employee.size()) * 100 ;
 	}
 	
-	public double percentOfWageEmp() {
+	private double percentOfWageEmp() {
 		double WagesEmpSize = 0; 
 		for(Employee emp : employee) {
 			if (emp instanceof Wages) {
@@ -99,7 +99,7 @@ public class EmployeeManager {
 		return (WagesEmpSize / employee.size()) * 100 ;
 	}
 	
-	public double percentOfPartTimeEmp() {
+	private double percentOfPartTimeEmp() {
 		double partTimeEmpSize = 0; 
 		for(Employee emp : employee) {
 			if (emp instanceof PartTime) {
